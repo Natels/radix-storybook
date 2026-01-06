@@ -1,0 +1,7 @@
+.container {
+  width: 700px;
+  height: 250px;
+  background-color: deepskyblue;
+  border-radius: 25px;
+  opacity: 0.12;
+}
