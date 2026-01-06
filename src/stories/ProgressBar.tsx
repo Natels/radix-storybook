@@ -1,5 +1,5 @@
-import { Progress as ProgressBar } from 'radix-ui';
-import styles from './Progress.module.css';
+import { Progress } from 'radix-ui';
+import styles from './ProgressBar.module.css';
 
 export interface ProgressProps {
   /** The current progress value (0 to 100) */
@@ -11,18 +11,18 @@ export interface ProgressProps {
 }
 
 /** Primary UI component for communicating progress of tasks */
-export const Progress = ({
+export const ProgressBar = ({
   value,
   size = 'medium',
   label,
   ...props
 }: ProgressProps) => {
   return (
-    <ProgressBar.Root {...props} className={styles.root}>
-      <ProgressBar.Indicator
+    <Progress.Root {...props} className={styles.root}>
+      <Progress.Indicator
         className={styles.indicator}
         style={{ transform: `translateX(-${100 - value}%)` }}
       />
-    </ProgressBar.Root>
+    </Progress.Root>
   );
 };
